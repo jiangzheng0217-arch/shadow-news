@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow News</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topline">
+        <strong>SHADOW NEWS</strong>
+        <span>SHADOW</span>
+      </header>
+
+      <section class="hero" id="top">
+        <div class="hero-art" aria-hidden="true">
+          <div class="visor-head"></div>
+          <div class="visor-glow"></div>
+          <div class="hero-word">SHADOW</div>
+        </div>
+        <div class="hero-copy">
+          <span class="eyebrow">SHADOW</span>
+          <h1>We start from noise, delivering only what matters.</h1>
+          <div class="hero-actions">
+            <button class="primary" data-jump="topics">Read Signal</button>
+            <button data-jump="detail">View Card</button>
+          </div>
+        </div>
+        <div class="controls">
+          <label>
+            时间窗
+            <select id="hours">
+              <option value="24">最近 24 小时</option>
+              <option value="48" selected>最近 48 小时</option>
+              <option value="168">最近一周</option>
+            </select>
+          </label>
+          <button id="refresh">刷新选题</button>
+        </div>
+        <div class="hero-float-card" aria-hidden="true">
+          <span>Signal to</span>
+          <strong>decode.</strong>
+          <i></i>
+        </div>
+        <div class="hero-strip">
+          <span>What matters</span>
+          <strong id="heroCount">Live signals</strong>
+          <span>Based on live AI sources</span>
+        </div>
+      </section>
+
+      <main class="panes">
+        <section id="topicsPane" class="topic-pane">
+          <div class="pane-head">
+            <div>
+              <span class="kicker">TOPIC FEED</span>
+              <h2>选题池</h2>
+            </div>
+            <span id="topicCount" class="count-pill">0 条</span>
+          </div>
+          <p id="status" class="status">等待刷新。</p>
+          <div id="filters" class="filters"></div>
+          <div id="topics" class="topic-list"></div>
+        </section>
+
+        <section id="detailPane" class="detail-pane">
+          <div class="pane-head dark-head">
+            <div>
+              <span class="kicker">READING CARD</span>
+              <h2>看懂这条</h2>
+            </div>
+            <div class="editor-actions">
+              <button id="openSource">打开原文</button>
+              <button id="copyHtml">复制说明</button>
+              <button id="copyBrief">复制选题卡</button>
+            </div>
+          </div>
+          <div class="detail-scroll">
+            <div id="detail" class="detail-empty">
+              <strong>等待信号</strong>
+              <p>选中一个 AIHOT 选题后，这里会显示来源、热度、摘要和写作判断。</p>
+            </div>
+            <div id="draft" class="action-card-empty">
+              <strong>选一个题</strong>
+              <p>这里会显示原文链接、复制按钮和可读取的网页信息。</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
