@@ -1,0 +1,54 @@
+.hero h1 {
+  max-width: 790px;
+  font-family: "Avenir Next Condensed", "Arial Black", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: clamp(50px, 6.6vw, 118px);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  word-spacing: 0.04em;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.hero-line {
+  display: block;
+}
+
+@media (max-width: 1240px) {
+  .hero-copy {
+    width: min(680px, 66%);
+    padding-left: 54px;
+  }
+
+  .hero h1 {
+    max-width: 640px;
+    font-size: clamp(48px, 6.1vw, 76px);
+    line-height: 0.94;
+    letter-spacing: -0.035em;
+    word-spacing: 0.05em;
+  }
+}
+
+@media (max-width: 960px) {
+  .hero-copy {
+    width: 100%;
+  }
+
+  .hero h1 {
+    max-width: 620px;
+    font-size: clamp(44px, 10.4vw, 74px);
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero h1 {
+    font-size: clamp(32px, 9.1vw, 36px);
+    line-height: 1.02;
+    letter-spacing: -0.018em;
+  }
+
+  .hero-actions button:not(.primary) {
+    display: none;
+  }
+}
