@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shadow News</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./hero-fix.css" />
   </head>
   <body>
     <div class="page-shell">
@@ -21,7 +22,11 @@
         </div>
         <div class="hero-copy">
           <span class="eyebrow">SHADOW</span>
-          <h1>We start from noise, delivering only what matters.</h1>
+          <h1 aria-label="We start from noise, delivering only what matters.">
+            <span class="hero-line">We start from</span>
+            <span class="hero-line">noise, delivering</span>
+            <span class="hero-line">only what matters.</span>
+          </h1>
           <div class="hero-actions">
             <button class="primary" data-jump="topics">Read Signal</button>
             <button data-jump="detail">View Card</button>
